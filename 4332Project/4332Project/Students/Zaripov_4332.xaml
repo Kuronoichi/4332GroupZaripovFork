@@ -5,8 +5,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:_4332Project.Students"
         mc:Ignorable="d"
-        Title="Zaripov_4332" Height="450" Width="800">
+        Title="Zaripov_4332" Height="350" Width="400">
     <Grid>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50">Зарипов А.Р. 4332</TextBlock>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">Зарипов А.Р. 4332</TextBlock>
+        <Button x:Name="b_Import" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Content="Импорт в БД excel" Click="B_Import_OnClick"/>
+        <Button x:Name="b_Export" Grid.Column="5" Grid.Row="2" Grid.ColumnSpan="2" Content="Экспорт в БД excel" Click="B_Export_OnClick"/>
+        <Button x:Name="b_jsonImport" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Content="Импорт в БД json" Click="b_jsonImport_Click"/>
+        <Button x:Name="b_jsonExport" Grid.Column="5" Grid.Row="4" Grid.ColumnSpan="2" Content="Импорт в Word json" Click="b_jsonExport_Click"/>
     </Grid>
 </Window>
